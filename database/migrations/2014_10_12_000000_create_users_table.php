@@ -22,6 +22,14 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+		
+		DB::table('users')->insert(
+			array(
+				'name' => 'First User',
+				'email' => 'dakaenev@gmail.com',
+				'password' => 'I_<3_Gravity_Marketing_Solutions',
+			)
+		);
     }
 
     /**
